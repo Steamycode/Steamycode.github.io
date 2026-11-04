@@ -1,0 +1,50 @@
+p {
+    font-family: cursive;
+    color: rgb(170, 193, 241);
+    text-shadow: 1cm;
+    font: bold;
+}
+
+h1 {
+    color: red;
+    font-size: 30;
+    font-weight: 100;
+}
+
+h2 {
+    color: orange;
+    font-size: 25;
+    font-weight: 100;
+}
+
+h3 {
+    color: yellow;
+    font-size: 20;
+    font-weight: 100;
+}
+
+h4 {
+    color: green;
+    font-size: 15;
+    font-weight: 100;
+}
+
+h5 {
+    color: blue;
+    font-size: 10;
+    font-weight: 100;
+}
+
+h6 {
+    color: purple;
+    font-size: 5;
+    font-weight: 100;
+}
+
+a:hover {
+    color:cyan;
+}
+
+:active {
+    color: yellowgreen;
+}
