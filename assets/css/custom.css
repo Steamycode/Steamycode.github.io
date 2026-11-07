@@ -2,48 +2,48 @@ body {
     font-family: cursive;
 }
 
-p{
-    font-family: cursive;
+body p {
     color: rgb(170, 193, 241);
-    text-shadow: 1cm;
-    font: bold;
+    text-shadow: 2px 2px #526176;
+    font-weight: bold;
 }
 
 h1 {
     color: red;
     font-size: 30;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 h2 {
     color: orange;
     font-size: 25;
-    font-weight: 100;
+    font-weight: 250;
 }
 
 h3 {
     color: yellow;
     font-size: 20;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 h4 {
     color: green;
     font-size: 15;
-    font-weight: 100;
+    font-weight: 350;
 }
 
 h5 {
     color: blue;
     font-size: 10;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 h6 {
     color: purple;
     font-size: 5;
-    font-weight: 100;
+    font-weight: 450;
 }
+
 
 a:hover {
     color:cyan;
@@ -53,19 +53,211 @@ a:active {
     color: yellowgreen;
 }
 
-/* Style for the active menu item */
-#navmenu .active {
-    color: #25c9ae;           /* Text color (e.g., white) */
-    background-color: #007bff; /* Background color (e.g., blue) */
-    font-weight: bold;        /* Make text bold */
-    border-radius: 5px;       /* Rounded corners */
-    padding: 10px 15px;       /* Adjust spacing */
-    text-decoration: none;    /* Remove underline */
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+
+.navmenu ul{
+    border: 5px solid rgb(60, 70, 92);
+    background-color: #213642;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
 }
 
-/* Optional: Hover effect for the active button */
-#navmenu:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    color: #ffffff;
+.navmenu .active {
+    color: #59b939;
+    background-color: rgb(19, 33, 42);
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: inset 0 5px 4px rgba(0,0,0,0.2);
+}
+
+.navmenu a {
+    padding: 5px 10px 5px 10px;
+}
+
+.navmenu a:hover {
+    color: #25c9ae;
+}
+
+
+.header {
+    background-color: #101a20f8;
+}
+
+
+.header-social-links i:hover {
+    color: #25c9ae;
+}
+
+
+.about-page p,
+.resume-page p,
+.portfolio-page p {
+    padding: 50px;
+}
+
+.about-page main,
+.resume-page main,
+.portfolio-page main {
+    margin-left: 150px;
+}
+
+
+.scroll-top {
+    background-color: #650b0b;
+    opacity: 0.8;
+    bottom: 30px;
+    right: 30px;
+}
+
+.scroll-top:hover {
+    transform: scale(1.5);
+}
+
+
+.list {
+    margin: 50px;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.simple-list,
+.number-list {
+    flex: 1;
+}
+
+.simple-list h2,
+.number-list h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.simple-list h2::after,
+.number-list h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #d4c221;
+}
+
+.simple-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.simple-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.simple-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #1387c1;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.simple-list li:hover {
+    color: #1387c1;
+}
+
+.simple-list li:hover::before {
+    transform: translateX(5px);
+}
+
+
+.number-list ol {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    counter-reset: upper-roman-counter;
+}
+
+.number-list ol > li {
+    counter-increment: upper-roman-counter;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.number-list ol > li::before {
+    content: counter(upper-roman-counter, upper-roman);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #213642;
+    color: #8a85e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.inner-list {
+    margin-top: 12px;
+}
+
+.inner-list li {
+    list-style-type: lower-latin;
+    position: relative;
+    padding-left:10px;
+    margin-left: 30px;
+    margin-bottom: 8px;
+    color: #d9b9b9;
+}
+
+.inner-list li:hover {
+    color: #1387c1;
+}
+
+
+
+.table {
+    margin: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table table {
+    border: 10px solid black;
+    border-radius: 25px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.table td, th {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dee0ec;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #bec3ed;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #262954;
+    color: #25c9ae;
 }
