@@ -1,4 +1,8 @@
-p {
+body {
+    font-family: cursive;
+}
+
+p{
     font-family: cursive;
     color: rgb(170, 193, 241);
     text-shadow: 1cm;
@@ -45,6 +49,23 @@ a:hover {
     color:cyan;
 }
 
-:active {
+a:active {
     color: yellowgreen;
+}
+
+/* Style for the active menu item */
+#navmenu .active {
+    color: #25c9ae;           /* Text color (e.g., white) */
+    background-color: #007bff; /* Background color (e.g., blue) */
+    font-weight: bold;        /* Make text bold */
+    border-radius: 5px;       /* Rounded corners */
+    padding: 10px 15px;       /* Adjust spacing */
+    text-decoration: none;    /* Remove underline */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Optional: Hover effect for the active button */
+#navmenu:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #ffffff;
 }
