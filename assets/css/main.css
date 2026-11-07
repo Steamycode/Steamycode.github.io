@@ -279,12 +279,6 @@ h6 {
     width: 25px;
   }
 
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
-
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -2849,6 +2843,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
