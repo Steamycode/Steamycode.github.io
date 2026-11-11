@@ -261,3 +261,16 @@ a:active {
     background-color: #262954;
     color: #25c9ae;
 }
+
+
+.containers {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.containers div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+}
