@@ -263,14 +263,416 @@ a:active {
 }
 
 
-.containers {
-  display: flex;
-  background-color: DodgerBlue;
+.uzduotys {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px
 }
 
-.containers div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 24px;
+
+.container-planuojama,
+.container-mokomasi,
+.container-atlikta {
+    width: 30%;
+    min-height: 500px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 18px;
+    /*box-shadow: 0 4px 12px #00000015;*/
+    overflow: hidden;
+}
+
+
+.header-planuojama,
+.header-mokomasi,
+.header-atlikta {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    gap: 20px;
+    padding: 20px 28px;
+}
+
+.header-planuojama {
+    background: #fff0d4;
+    border-bottom: 3px solid #e9c46a;
+}
+
+.header-mokomasi {
+    background: #63a7d7;
+    border-bottom: 3px solid #38639f;
+}
+
+.header-atlikta {
+    background: #65c462;
+    border-bottom: 3px solid #218926;
+}
+
+
+.header-planuojama h2,
+.header-mokomasi h2,
+.header-atlikta h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.header-planuojama h2 {
+    color: #c18b20;
+}
+.header-mokomasi h2 {
+    color: #194780;
+}
+.header-atlikta h2 {
+    color:#115216;
+}
+
+
+.calendar {
+    font-size: 30px;
+    color: #c18b20;
+}
+
+.book {
+    font-size: 30px;
+    color: #194780;
+}
+
+.checkbox {
+    font-size: 30px;
+    color: #115216;
+}
+
+
+.task-container {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px #00000010;
+}
+
+.planuojama-icons {
+    background: #fff2d8;
+    color: #bd8b28;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.mokomasi-icons {
+    background: #e4f9ff;
+    color: #265692;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.atlikta-icons {
+    background: #e6ffe0;
+    color: #3a7325;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+/*.task-info {
+    flex: 1;
+}*/
+
+
+.container-planuojama .task-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #bd8b28;
+}
+
+.container-mokomasi .task-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #265692;
+}
+.container-atlikta .task-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #3a7325;
+}
+
+
+.status {
+    background: #e7e7e7;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: rgb(61, 60, 60);
+    white-space: nowrap;
+}
+
+.xp {
+    background: #f0f1f3;
+    padding: 7px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: black;
+    white-space: nowrap;
+    display: flex;
+    margin-left: auto;
+}
+
+
+.level{
+    margin: 20px 90px;
+    min-height: 300px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.header-level {
+    display: flex;
+    justify-content: center;
+    padding: 20px 16px;
+    display: flex;
+    gap: 20px;
+}
+
+.bendras-xp,
+.lygis,
+.rangas {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    padding: 10px 20px;
+    margin: auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px #00000010;
+}
+
+.bendras-xp {
+    background-color: #e7f0f8;
+}
+.lygis {
+    background-color: #f7f0fd;
+}
+.rangas {
+    background-color: #efffef;
+}
+
+.star {
+    background-color: #c8deee;
+    color: #38639f;
+}
+.signal {
+    background-color: #e8dbf3;
+    color: #9328bd;
+}
+.trophy {
+    background-color: #dafad7;
+    color: #2bbd28;
+}
+
+.star,
+.signal,
+.trophy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 18px;
+    font-size: 30px;
+}
+
+.info {
+    margin-left: auto;
+    margin-right: 30px;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+
+.header-level h3 {
+    color: gray;
+    font-size: 15px;
+}
+
+.juosta {
+    margin: 0 70px;
+    padding: 0 0 30px 0;
+    border-bottom: solid rgb(229, 227, 227) 2px;
+}
+
+.juosta label {
+    display: block;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.progresas {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.progresas progress {
+    width: 100%;
+    height: 100%;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* Background */
+.progresas progress::-webkit-progress-bar {
+    background-color: #ccc;
+    border-radius: 25px;
+}
+
+/* Progress */
+.progresas progress::-webkit-progress-value {
+    background-color: #007bff;
+    border-radius: 25px;
+}
+
+.progresas progress::-moz-progress-bar {
+    background-color: #138322;
+    border-radius: 25px;
+}
+
+.procentai {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.footer-level {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px
+}
+
+.skill,
+.done,
+.percentage {
+    width: 33%;
+    min-height: 50px;
+    margin: 10px auto;
+    /*background: rgb(228, 223, 223);*/
+    /*box-shadow: 0 4px 12px #00000015;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-txt,
+.done-txt,
+.percentage-txt {
+    color: black;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.skills-icon {
+    color: purple;
+    font-size: 25px;
+}
+
+.done-icon {
+    color: peru;
+    font-size: 25px;
+}
+
+.percentage-icon {
+    color: greenyellow;
+    font-size: 25px;
+}
+
+.divider {
+    width: 2px;
+    min-height: 50px;
+    margin: 10px auto;
+    /*background: rgb(228, 223, 223);*/
+    /*box-shadow: 0 4px 12px #00000015;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(229, 227, 227);
+    border-radius: 5px;
+}
+
+.services-page .services {
+    background: linear-gradient(45deg, #0e1253, #390710, #44a5d9);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 19s ease infinite;
+    -moz-animation: AnimationName 19s ease infinite;
+    animation: AnimationName 19s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.square {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    animation: scaling 2s ease infinite alternate-reverse;
+}
+
+.spining-star {
+    display: flex;
+    margin: 50px 100px;
+    padding-right: 50px;
+    font-size: 50px;
+    justify-content: right;
+    color: red;
+    animation: spining 2s linear infinite;
+}
+
+@keyframes scaling {
+    to {
+        transform: scale(2.0);
+    }
+}
+
+@keyframes spining {
+    to {
+        transform: rotate(1turn);
+    }
 }
